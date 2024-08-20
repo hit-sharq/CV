@@ -6,20 +6,34 @@ import Skills from "./components/Skills"
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-
-const App = () => {
+ import SignIn from "./components/SignIn";
+  import SignUp from "./components/SignUp";
+  import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
+ 
+ // App component
+function App() {
   return (
-    <div className='App' style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-       <Header />
-      <Profile />
-      <Experience />
-      <Skills />
-      <Education />
-      <Projects />
-      <Contact />
-    </div>
+    <Router>
+      <div className="App" style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
+        <Header />
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/signin">Sign In</Link> | <Link to="/signup">Sign Up</Link>
+        </nav>
+        <Routes>
+          <Route path="/" exact>
+            <Profile />
+            <Experience />
+            <Skills />
+            <Education />
+            <Projects />
+            <Contact />
+          </Route>
+          <Route path="/signin" component={SignIn} />
+          <Route path="/signup" component={SignUp} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-   
 
 export default App;

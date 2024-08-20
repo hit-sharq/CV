@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+}

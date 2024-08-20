@@ -11,6 +11,11 @@ const projectsData = [
     description: "Short description of project 2.",
     link: "https://projectlink2.com"
   },
+  {
+    title: "Project 3",
+    description: "Short description of project 2.",
+    link: "https://www.smartlablearning.com/project-based-learning-examples/"
+  },
   // Add more projects as needed
 ];
 
